@@ -7,9 +7,9 @@ PRODUCT_PACKAGES += \
     apns-conf.xml
 
 # Telephony packages
-PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver
+#PRODUCT_PACKAGES += \
+#    Stk \
+#    CellBroadcastReceiver
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
