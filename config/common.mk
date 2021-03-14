@@ -157,15 +157,15 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 include vendor/aosp/config/branding.mk
 
 # OTA
-include vendor/aosp/config/ota.mk
+#include vendor/aosp/config/ota.mk
 
 # GApps
-include vendor/gapps/config.mk
+#include vendor/gapps/config.mk
 
 # Pixel Style
-include vendor/pixelstyle/config.mk
+#include vendor/pixelstyle/config.mk
 
 # Customization
-include vendor/google-customization/config.mk
+#include vendor/google-customization/config.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
