@@ -45,10 +45,10 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/umount_all.sh:install/bin/umount_all.sh
 
 # OTA
-ifneq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.ota.allow_downgrade=true
-endif
+##ifneq ($(TARGET_BUILD_VARIANT),user)
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.ota.allow_downgrade=true
+#endif
 
 # Some permissions
 PRODUCT_COPY_FILES += \
@@ -120,38 +120,38 @@ PRODUCT_PACKAGES += \
     TouchGestures
 
 # PixelSetupWizard overlay
-PRODUCT_PACKAGES += \
-    PixelSetupWizardOverlay \
-    PixelSetupWizardAodOverlay
+#PRODUCT_PACKAGES += \
+#    PixelSetupWizardOverlay \
+#    PixelSetupWizardAodOverlay
 
 # Dex preopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
+#PRODUCT_DEXPREOPT_SPEED_APPS += \
+#    SystemUI \
+#    NexusLauncherRelease
 
 # Themed bootanimation
-TARGET_MISC_BLOCK_OFFSET ?= 0
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.misc.block.offset=$(TARGET_MISC_BLOCK_OFFSET)
-PRODUCT_PACKAGES += \
-    misc_writer_system \
-    themed_bootanimation
+#TARGET_MISC_BLOCK_OFFSET ?= 0
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.misc.block.offset=$(TARGET_MISC_BLOCK_OFFSET)
+#PRODUCT_PACKAGES += \
+#    misc_writer_system \
+#    themed_bootanimation
 
 # Screen recorder
-PRODUCT_PACKAGES += \
-    Recorder
+#PRODUCT_PACKAGES += \
+#    Recorder
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED := false
-ifeq ($(TARGET_GAPPS_ARCH),arm64)
-ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-TARGET_FACE_UNLOCK_SUPPORTED := true
-endif
-endif
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+#TARGET_FACE_UNLOCK_SUPPORTED := false
+##ifeq ($(TARGET_GAPPS_ARCH),arm64)
+##ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
+#PRODUCT_PACKAGES += \
+#    FaceUnlockService
+#TARGET_FACE_UNLOCK_SUPPORTED := true
+#endif
+#endif
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # Branding
 include vendor/aosp/config/branding.mk
